@@ -1,144 +1,171 @@
 <div align="center">
-
-# ⚽ OffSide
-### AI-Powered Football Match Analysis & Performance Intelligence
-
-**Turning Football Footage into Actionable Performance Insights.**
-
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![YOLO](https://img.shields.io/badge/YOLO-111F68?style=for-the-badge&logo=ultralytics&logoColor=white)](https://www.ultralytics.com/)
-[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
-
-**Graduation Project | Computer Science & Artificial Intelligence**
-
+  <img src="assets/offside-banner.png" width="100%" alt="OffSide AI Football Analytics Banner">
 </div>
 
----
+<h1 align="center">⚽ OffSide — AI Football Analytics</h1>
 
-## 🚀 Overview
+<p align="center">
+  <strong>See Beyond the Game. Discover the Talent.</strong>
+</p>
 
-**OffSide** is an AI-powered football analytics platform designed to make professional-level football performance analysis more accessible, particularly for grassroots football, amateur leagues, and 5-a-side tournaments.
+<p align="center">
+  An AI-powered football analytics platform designed to bring professional-level performance analysis to grassroots, amateur, and 5-a-side football.
+</p>
 
-Traditional football analytics often depend on expensive tracking equipment, specialized infrastructure, and dedicated analysis teams. This makes advanced performance insights difficult to access for smaller clubs and talented players outside professional academies.
-
-OffSide addresses this challenge by transforming ordinary football match footage into meaningful performance data using **Computer Vision, Deep Learning, and Intelligent Analytics**.
-
-Using a standard camera recording, the system analyzes match footage, detects and tracks players and the ball, recognizes football actions, calculates player performance metrics, and generates visual insights.
-
-> **Our Vision:** Democratizing football analytics and giving every talented player the opportunity to be seen through data, not just exposure.
-
----
-
-## 🎯 The Problem We're Solving
-
-Football talent exists everywhere, but access to professional performance analytics does not.
-
-- **Limited Visibility:** Talented amateur players often remain undiscovered due to a lack of reliable performance records.
-- **Expensive Infrastructure:** Traditional tracking systems require specialized hardware and expensive equipment.
-- **Manual Analysis:** Recording match statistics manually is time-consuming and prone to human error.
-- **Data Accessibility:** Small clubs and grassroots tournaments lack affordable tools to evaluate player performance.
-
-### 💡 Our Approach
-
-OffSide uses AI-powered video analysis to turn a regular football recording into structured performance insights, helping players, organizers, coaches, and scouts make better-informed decisions.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Deep%20Learning-PyTorch-orange?logo=pytorch" />
+  <img src="https://img.shields.io/badge/Object%20Detection-YOLO-green" />
+  <img src="https://img.shields.io/badge/Computer%20Vision-OpenCV-blue?logo=opencv" />
+  <img src="https://img.shields.io/badge/Project-Graduation%20Project-purple" />
+</p>
 
 ---
 
-## ✨ Key Features
+## 📌 Overview
 
-### 🎯 1. Player & Ball Detection
-- AI-based player and ball detection using YOLO.
-- Identification of players, referees, and football objects.
-- Frame-by-frame visual detection and localization.
+**OffSide** is an AI-powered football analysis system that transforms ordinary match recordings into meaningful football performance insights.
 
-### 🔄 2. Multi-Object Tracking
-- Player tracking using ByteTrack.
-- Consistent player ID assignment across video frames.
-- Ball trajectory tracking.
-- Handling temporary ball occlusions through motion-based interpolation.
+Using Computer Vision and Deep Learning, the platform analyzes match footage to detect and track players, recognize football actions, identify player jerseys, and generate performance statistics.
 
-### 👕 3. Jersey Number Recognition
-- Automated jersey number recognition.
-- Multi-frame voting to improve recognition consistency.
-- Linking player identities with their match statistics.
+The goal is simple:
 
-### 🏳️ 4. Team Classification
-- Automatic team assignment based on jersey colors.
-- HSV color-space analysis.
-- Team-level performance aggregation.
+**Make football analytics accessible to every player — not just professional clubs.**
 
-### 🗺️ 5. Tactical Radar & Pitch Mapping
-- Transformation of video coordinates into pitch coordinates.
-- Homography-based perspective transformation.
-- Semantic camera movement compensation.
-- 2D tactical radar visualization.
-- Individual player heatmaps.
+Traditional football analytics systems often depend on expensive GPS trackers, wearable sensors, and specialized equipment. OffSide explores a more accessible alternative: using a standard camera recording as the primary input.
 
-### 🏃 6. Player Performance Analytics
-- Total distance covered.
-- Average and maximum speed.
-- Player movement analysis.
-- Ball possession tracking.
-- Individual and team performance statistics.
+---
 
-### ⚡ 7. Football Action Recognition
-Powered by a 3D Convolutional Neural Network (**R3D-18**).
+## 🎯 The Problem
 
-The system analyzes temporal video sequences to recognize football actions, including:
+Thousands of talented football players participate in grassroots leagues, amateur tournaments, and 5-a-side matches.
 
-- Passes
-- High Passes
-- Shots
-- Headers
-- Crosses
-- Throw-ins
+However, many of them lack access to:
 
-### 📊 8. Match Intelligence
-- Automated match statistics generation.
-- Player-level performance insights.
-- Team-level performance summaries.
-- Structured analytics output.
+- Professional performance analysis.
+- Reliable and documented player statistics.
+- Objective performance evaluation.
+- Visibility to scouts and football organizations.
+- Affordable football analytics technology.
+
+As a result, talented players may remain undiscovered simply because their performance is not documented.
+
+### 💡 Our Solution
+
+OffSide aims to bridge this gap by converting match videos into structured football data.
+
+Instead of relying on expensive hardware, the system uses AI models to extract insights directly from video footage.
+
+---
+
+## 🚀 Key Features
+
+### 1. Player and Ball Detection
+
+- Detect football players and the ball from match footage.
+- Identify relevant objects in each video frame.
+- Provide detection information for downstream tracking and analysis.
+
+### 2. Multi-Object Tracking
+
+- Maintain player identities across consecutive frames.
+- Track player movement throughout the match.
+- Reduce identity switches using object tracking techniques.
+
+### 3. Jersey Number Recognition
+
+- Detect jersey regions.
+- Recognize visible player numbers.
+- Associate recognized numbers with tracked players whenever possible.
+
+### 4. Team Classification
+
+- Analyze player appearance and jersey colors.
+- Use color-based classification techniques.
+- Assign players to their corresponding teams.
+
+### 5. Football Pitch Mapping
+
+- Map player positions onto a tactical pitch representation.
+- Visualize player positioning and movement.
+- Support spatial analysis of match performance.
+
+### 6. Player Performance Analytics
+
+Generate visual insights and statistics such as:
+
+- Player movement.
+- Distance covered.
+- Speed estimation.
+- Heatmaps.
+- Team positioning.
+- Possession-related analysis.
+
+*The availability and accuracy of individual metrics depend on the implemented pipeline and video calibration.*
+
+### 7. Football Action Recognition
+
+The project explores video-based action recognition using deep learning.
+
+The action classes include:
+
+| Action | Description |
+|---|---|
+| PASS | Passing the ball |
+| HIGH_PASS | High ball pass |
+| SHOT | Shooting attempt |
+| HEADER | Heading the ball |
+| CROSS | Crossing the ball |
+| THROW_IN | Throw-in |
+| OUT | Ball out of play |
+| PLAYER_SUCCESSFUL_TACKLE | Successful tackle |
+| BALL_PLAYER_BLOCK | Ball-player blocking event |
+
+### 8. Match Intelligence
+
+The extracted information can support:
+
+- Player performance evaluation.
+- Match statistics.
+- Tactical analysis.
+- Player comparison.
+- Scouting and talent discovery.
 
 ---
 
 ## 🧠 System Architecture
 
-OffSide follows a multi-stage AI processing pipeline that transforms raw football footage into structured match analytics.
+The overall processing workflow follows this structure:
 
 ```mermaid
 flowchart TD
-    A["🎥 Input Football Video"] --> B["Player Detection - YOLO"]
-    A --> C["Ball Detection"]
-    A --> D["Pitch Segmentation"]
-
-    B --> E["Multi-Object Tracking - ByteTrack"]
-    E --> F["Jersey Number Recognition"]
-    F --> G["Team Classification - HSV"]
-
-    C --> H["Ball Tracking & Interpolation"]
-    D --> I["Semantic Pitch Mapping"]
-    I --> J["Homography Transformation"]
-
-    G --> K["Ball Possession Detection"]
-    H --> K
-    J --> K
-
-    K --> L["Action Recognition - R3D-18"]
-    K --> M["Speed & Distance Estimation"]
-
-    M --> N["Tactical Radar & Heatmaps"]
-    L --> O["Match Statistics"]
-
-    N --> P["Analytics Aggregation"]
-    O --> P
-
-    P --> Q["Backend API"]
-    Q --> R["Cloud Database & Storage"]
-    R --> S["Mobile Application"]
+    A[Football Match Video] --> B[Video Preprocessing]
+    B --> C[Player & Ball Detection]
+    C --> D[Multi-Object Tracking]
+    D --> E[Player Identification]
+    E --> F[Jersey Number Recognition]
+    E --> G[Team Classification]
+    D --> H[Player Position Extraction]
+    H --> I[Pitch Mapping]
+    I --> J[Movement Analytics]
+    C --> K[Action Recognition]
+    F --> L[Match Intelligence]
+    G --> L
+    J --> L
+    K --> L
+    L --> M[Performance Insights & Visualization]
 ```
+
+### Processing Pipeline
+
+1. **Input:** Football match recording.
+2. **Preprocessing:** Frame extraction and video preparation.
+3. **Detection:** Identify players and the ball.
+4. **Tracking:** Maintain object identities across frames.
+5. **Identification:** Extract jersey numbers and classify teams.
+6. **Spatial Analysis:** Estimate player positions and map them onto the pitch.
+7. **Action Recognition:** Classify football-related actions.
+8. **Analytics:** Generate performance insights and visualizations.
 
 ---
 
@@ -147,111 +174,92 @@ flowchart TD
 | Category | Technologies |
 |---|---|
 | Programming Language | Python |
-| Computer Vision | OpenCV |
-| Object Detection | Ultralytics YOLO |
-| Object Tracking | ByteTrack |
 | Deep Learning | PyTorch |
+| Object Detection | YOLO |
+| Computer Vision | OpenCV |
+| Object Tracking | ByteTrack / Tracking Algorithms |
+| Player Recognition | CNN / ResNet-based Models |
 | Action Recognition | R3D-18 |
-| Image Processing | NumPy, OpenCV |
-| Team Classification | HSV Color Space |
-| Player Mapping | Homography Transformation |
-| Backend | FastAPI |
-| Database & Cloud | Supabase |
-| Mobile Development | Flutter, Dart |
+| Data Processing | NumPy, Pandas |
+| Visualization | Matplotlib, OpenCV |
+| Backend / Integration | FastAPI |
+| Mobile Application | Flutter |
+| Cloud / Database Integration | Supabase |
+
+*The technologies listed represent the project's technology stack and integration direction; not every component is necessarily part of the currently executable video pipeline.*
 
 ---
 
-## 🔬 Core AI & Computer Vision Techniques
+## 🔬 Computer Vision & Deep Learning
 
-OffSide integrates several computer vision and deep learning techniques to overcome the challenges of analyzing dynamic football footage.
+### Object Detection
 
-| Technique | Purpose |
-|---|---|
-| YOLO | Real-time object detection |
-| ByteTrack | Multi-object tracking |
-| HSV Classification | Team identification |
-| Homography | Perspective transformation |
-| Optical/Semantic Camera Compensation | Stabilizing pitch mapping under camera movement |
-| Motion Interpolation | Estimating temporarily missing ball positions |
-| R3D-18 | Temporal football action recognition |
-| Heatmap Generation | Visualizing player movement patterns |
+The detection stage identifies football-related objects in individual frames.
 
-### Player Movement Estimation
+YOLO-based detection is used to locate objects through bounding boxes.
 
-Player positions are transformed into pitch coordinates to estimate their movement in real-world space.
-
-The Euclidean distance between consecutive positions is calculated as:
-
-\[
-d(t)=\sqrt{(x_t-x_{t-1})^2+(y_t-y_{t-1})^2}
-\]
-
-Total distance:
-
-\[
-D_{total}=\sum_{t=1}^{T}d(t)
-\]
-
-Instantaneous speed:
-
-\[
-v(t)=d(t)\times FPS
-\]
-
-This allows the system to generate meaningful movement metrics instead of relying only on raw pixel coordinates.
-
----
-
-## 📈 Action Recognition Model
-
-OffSide uses **R3D-18**, a 3D Convolutional Neural Network, to recognize football actions from temporal video sequences.
-
-Unlike conventional image classification, 3D CNNs learn both spatial and temporal information, making them suitable for recognizing actions that develop across multiple frames.
-
-### Recognized Actions
-
-| Action | Description |
-|---|---|
-| PASS | Passing the ball |
-| HIGH_PASS | High aerial pass |
-| SHOT | Attempt to score |
-| HEADER | Heading the ball |
-| CROSS | Delivering the ball into a dangerous area |
-| THROW_IN | Throw-in situation |
-
-The model was trained using video augmentation techniques to improve generalization and address limited training data.
-
----
-
-## 📂 Repository Structure
+Each detection can be represented as:
 
 ```text
-OffSide/
+Detection = {
+    class_id,
+    confidence,
+    bounding_box
+}
+```
+
+### Multi-Object Tracking
+
+Tracking associates detections across frames to maintain consistent object identities.
+
+This allows the system to estimate player movement and follow individuals throughout a match.
+
+### Jersey Number Recognition
+
+A dedicated recognition stage analyzes player jersey regions to extract visible numbers.
+
+The recognition output can help connect tracked players with their registered identities.
+
+### Team Classification
+
+Player jersey colors can be analyzed using HSV color representations.
+
+This supports grouping players into teams based on their visual appearance.
+
+### Action Recognition
+
+The project explores 3D Convolutional Neural Networks for recognizing football actions from video clips.
+
+The R3D-18 architecture processes spatial and temporal information to learn motion-related features.
+
+---
+
+## 📂 Project Structure
+
+```text
+AI-Football-Analysis/
+│
+├── assets/
+│   └── offside-banner.png
 │
 ├── data/
-│   └── Training and project data
+│   └── ...
 │
 ├── notebooks/
-│   └── Model experiments and development notebooks
+│   └── ...
 │
 ├── scratch/
-│   └── Experimental implementations
+│   └── ...
 │
 ├── src/
-│   └── Core source modules
+│   └── ...
 │
 ├── pipeline.py
-│   └── Main football analysis pipeline
-│
 ├── create_colab_package.py
-│   └── Google Colab packaging utility
-│
 ├── graduation_project_book.md
-│   └── Graduation project technical documentation
-│
 ├── graduation_thesis_content.md
-│   └── Research and thesis documentation
-│
+├── source.txt
+├── .gitignore
 └── README.md
 ```
 
@@ -261,20 +269,24 @@ OffSide/
 
 ### Prerequisites
 
-- Python 3.10+
-- Git
-- Google Colab or a local Python environment
-- CUDA-compatible GPU recommended for deep learning workloads.
+- Python 3.10 or later.
+- Git.
+- A compatible environment for PyTorch.
+- GPU acceleration is recommended for computationally intensive video analysis.
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/nabilamir1/AI-Football-Analysis.git
+```
 
+### 2. Navigate to the Project
+
+```bash
 cd AI-Football-Analysis
 ```
 
-### 2. Set Up a Virtual Environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -283,98 +295,128 @@ python -m venv venv
 Activate it:
 
 **Windows:**
+
 ```bash
 venv\Scripts\activate
 ```
 
 **Linux / macOS:**
+
 ```bash
 source venv/bin/activate
 ```
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 
-Install the Python dependencies required by the project modules and notebooks.
+Install the core packages:
 
 ```bash
-pip install torch torchvision opencv-python numpy pandas ultralytics
+pip install torch torchvision
+pip install opencv-python numpy pandas ultralytics
 ```
 
-Additional dependencies may be required depending on the selected module and execution environment.
+Additional dependencies may be required depending on the specific modules being executed.
 
-### 4. Run the Analysis Pipeline
+### 5. Configure Model Weights and Input Data
 
-The main processing entry point is:
+Before running the pipeline:
+
+- Place the required input video in the expected data directory.
+- Ensure the required trained model weights are available.
+- Verify model paths and configuration settings.
+- Install any additional dependencies required by the selected modules.
+
+### 6. Run the Pipeline
 
 ```bash
 python pipeline.py
 ```
 
-**Note:** Configure the required model weights, input video paths, and project settings according to the pipeline configuration before execution. The complete application and cloud integration may require additional setup.
+**Note:** Exact execution requirements depend on the model checkpoints, input video paths, and configuration used by the current implementation.
 
 ---
 
-## 🎓 Project Scope & Academic Context
+## 📊 Expected Outputs
 
-OffSide was developed as a **Computer Science & Artificial Intelligence Graduation Project**.
+The analysis pipeline is designed to produce information that can support:
 
-The project explores the practical integration of:
-
-- Computer Vision
-- Deep Learning
-- Object Detection & Tracking
-- Video Understanding
-- Sports Performance Analytics
-- AI-powered Applications
-- Cloud-based Data Management
-
-The project was also presented at the **Smart Innovation Exhibition**, associated with **IEEE ICMISI 2026 at AASTMT**.
+| Output | Purpose |
+|---|---|
+| Player Detection | Locate players in match frames |
+| Ball Detection | Locate the football |
+| Player Tracking | Maintain player identities |
+| Jersey Recognition | Extract player numbers |
+| Team Classification | Identify team membership |
+| Pitch Mapping | Visualize spatial positioning |
+| Heatmaps | Analyze player movement patterns |
+| Speed Estimation | Estimate movement speed |
+| Distance Covered | Analyze player movement |
+| Action Recognition | Identify football-related actions |
 
 ---
 
-## 🌍 Our Impact
+## 🌍 Impact & Vision
 
-OffSide is built around a simple idea:
+### Democratizing Football Analytics
 
-**Talent should never be limited by the lack of data.**
+Professional football clubs have access to advanced tracking systems, specialized cameras, and dedicated analytics teams.
 
-By making football analytics more accessible, we aim to help:
+Grassroots players often do not.
 
-- **Players:** Build measurable performance profiles and track their development.
-- **Organizers:** Gain structured match statistics and reduce dependence on manual recording.
-- **Scouts:** Discover promising players through objective performance indicators.
-- **Coaches:** Understand player movement and team performance through visual analytics.
+OffSide aims to make performance analysis more accessible by using existing match recordings and AI-based computer vision techniques.
 
-Our long-term goal is to help bridge the gap between grassroots football and professional-level performance analysis.
+Our vision is to help:
+
+- **Players:** Understand their performance and track their development.
+- **Organizers:** Manage tournaments and improve match documentation.
+- **Scouts:** Discover promising players through measurable performance data.
+
+**Talent should not remain invisible because data is unavailable.**
 
 ---
 
 ## 🔮 Future Improvements
 
-- Improved player re-identification across longer sequences.
-- More advanced football event detection.
-- Enhanced real-time processing performance.
-- Expanded tactical and statistical analysis.
-- Improved scout-oriented player discovery.
-- Further integration between AI processing and mobile application workflows.
+Potential future development directions include:
+
+- Real-time match analysis.
+- Improved player re-identification.
+- More robust jersey number recognition.
+- Advanced ball tracking.
+- Automated event detection and match statistics.
+- Tactical formation analysis.
+- Player comparison dashboards.
+- Scout-oriented player discovery.
+- Improved referee-assistance capabilities.
+- Mobile application integration.
+- Cloud-based match management and player profiles.
 
 ---
 
-## 👨‍💻 Development & Credits
+## 🎓 Academic Context
 
-**OffSide** is a collaborative academic project developed by a team of Computer Science and Artificial Intelligence students.
+OffSide is a graduation project developed as an exploration of Artificial Intelligence, Computer Vision, and Deep Learning applied to football analytics.
 
-Built with passion for Artificial Intelligence, Computer Vision, and Football.
+The project focuses on applying modern AI techniques to a real-world problem: making football performance data more accessible to grassroots players and amateur competitions.
 
-Special thanks to the open-source communities behind PyTorch, Ultralytics, OpenCV, ByteTrack, FastAPI, and Flutter.
+**Project:** OffSide — AI Football Analytics  
+**Academic Year:** 2025–2026  
+**Field:** Artificial Intelligence & Computer Vision
+
+---
+
+## 👨‍💻 Contributors
+
+Developed as a collaborative graduation project.
 
 ---
 
 <div align="center">
 
 ### ⚽ OFFSIDE
-**See Beyond the Game. Discover the Talent.**
 
-*Democratizing Football Analytics, One Match at a Time.*
+**SEE BEYOND THE GAME. DISCOVER THE TALENT.**
+
+*Turning football footage into meaningful intelligence.*
 
 </div>
